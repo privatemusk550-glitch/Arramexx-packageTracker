@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="img/letter-a.png" type="image/x-icon">
+    <!--  -->
+
+    <title>Arramex Logistics</title>
+</head>
+<body>
+<div class="hidden items-center justify-center min-h-screen space-x-2 bg-white" id="loading">
+  <div class="w-4 h-4 bg-red-600 rounded-full animate-bounce"></div>
+  <div class="w-4 h-4 bg-red-600 rounded-full animate-bounce [animation-delay:0.15s]"></div>
+  <div class="w-4 h-4 bg-red-600 rounded-full animate-bounce [animation-delay:0.3s]"></div>
+
+</div>
+
+    <div id="main-container" class=" cursor-default text-gray-900 font-redHat w-screen h-full  overflow-hidden">
+          <header class="flex justify-between">
+           <div id="logo">
+            <img src="img/aramex-logo-english.webp" alt="" class="w-name p-3 larg:w-56">
+           </div>
+           <div id="desktop-menu" class=" hidden gap-4 p-3  text-lg font-medium bg-white rounded-md larg:flex ">
+            <p class="hover:text-aramexRed  cursor-pointer border-aramexRed hover:border-b"> Ship and track</p>
+            <a href="About.html" class=" hover:text-aramexRed  cursor-pointer border-aramexRed hover:border-b">Solutions</a>
+            <a href="About.html"><p class="hover:text-aramexRed cursor-pointer border-aramexRed hover:border-b">About us </p></a>
+            </div>
+            <div class="hidden text-gray-400 p-3 gap-2 larg:flex">
+                <span class="flex">
+                    <img src="img/translate.png" alt="" class="h-7">
+                    <div id="auto-translate-box" >
+                  <select id="languageSwitcher" onchange="changeLanguage(this.value)">
+                    <option value="">🌍 Auto Detect</option>
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="pt">Portuguese</option>
+                    <option value="es">Spanish</option>
+                    <option value="ar">Arabic</option>
+                  </select>
+              </div>
+                </span>
+                <span class="flex">
+                    <img src="img/pin.png" alt="" class="h-7">
+                    <p>United Arab Emirates</p>
+                </span>
+            </div>
+           <div id="moblie-menu" class=" larg:hidden">
+            <img src="img/icons8-menu-64.png" alt="" class="w-14 p-2 ml-2">
+           </div>
+        </header>
+        <section class="h-banner  flex align-baseline justify-center larg:hidden" >
+            <div id="drop-menu" class="p-3 w-input h-64 font-medium bg-white rounded-md absolute z-10 hidden">
+            <p class="hover:text-aramexRed w-36 p-5 cursor-pointer border-aramexRed hover:border-b"> Ship and track</p>
+            <p class=" hover:text-aramexRed w-24 p-5 cursor-pointer border-aramexRed hover:border-b">Solutions</p>
+            <a href="About.html"><p class="hover:text-aramexRed w-32 p-5 cursor-pointer border-aramexRed hover:border-b">About us</p></a>
+            </div>
+           
+            <div id="banner" class="z-0 absolute">
+                <img src="img/homepageen80773f4d-2dce-418c-8612-1d7862fe5f68.webp" alt="" class="w-input p-1 ">
+            </div>
+        </section>
+
+        <h3 class="text-3xl font-bold text-aramexRed my-6 ml-4 larg:hidden text-center"> Track your Shipment </h3>
+        <main class="flex flex-wrap p-4 justify-center align-middle larg:flex-nowrap">
+            <div class="larg:flex flex-wrap larg:w-flex align-middle justify-center larg:mt-28">
+                  <h3 class="text-3xl font-bold text-aramexRed  hidden larg:block"> Track your Shipment </h3>
+                <form action="" class="flex gap-1 align-middle justify-center larg:flex-nowrap ">
+            <div>
+                <input type="text" id="tracking-input" placeholder="Type your tracking number here " class="w-72 h-14 outline-none  p-3 shadow-lg shadow-gray-400 rounded border -600 larg:w-input larg:h-20"> 
+                <small class="text-red-700 hidden" id="error">Tracking number incorrect</small>
+            </div>
+                <button type="submit" class="bg-aramexRed  text-white font-medium rounded w-20 hover:bg-red-800 h-14 larg:h-20 "> Track </button>
+            </form>
+            <div class="-ml-3 p-4 font-medium text-gray-700 ">
+                <p class="text-center larg:text-left">Enter multiple tracking numbers with a space or comma.
+                If your tracking number isn't working, double-check the format </p>
+                <p class="text-center larg:text-left">Registered business customers can access advanced tracking </p>
+            </div>      
+            </div>
+            <div>
+                  <div id="banner" class="hidden larg:flex align-middle justify-center">
+                <img src="img/homepageen80773f4d-2dce-418c-8612-1d7862fe5f68.webp" alt="" class="w-flex p-1 ml-20 mt-10 h-64">
+            </div>
+            </div>
+        </main>
+       <section id="services"  class="bg-gray-200 flex flex-wrap gap-4 justify-center align-middle p-3 pt-10 w-screen">
+        <div id="shipment" class=" w-input bg-white rounded-md flex flex-wrap align-middle justify-center p-3 ">
+            <p class=" text-xl font-bold text-aramexRed">Send Shipment</p>
+            <img src="img/delivery.png" alt="" class=" px-32 " >
+            <p class="text-gray-600 ">Start shipping with ease. No registration required!</p>
+        </div>
+        <div id="rate" class=" w-input bg-white rounded-md flex flex-wrap justify-center align-middle p-3 gap-3">
+            <p class=" text-xl font-bold text-aramexRed ">Rate Calculator</p>
+            <img src="img/calculator (1).png" alt="" class="px-32">
+            <p class="text-gray-600 ">Get instant shipping rates</p>
+        </div>
+        <div id="Support" class=" w-input bg-white rounded-md flex flex-wrap gap-5 justify-center align-middle p-3">
+            <p class=" text-xl font-bold text-aramexRed">Help and Support</p>
+            <img src="img/headset.png" alt="" class="px-32">
+            <p class="text-gray-600 ">Let's get you the right help</p>
+        </div>
+       </section>
+       <section id="goals" class="w-screenflex flex-wrap align-middle justify-center gap-6 mt-2  larger:flex-nowrap ">
+        <h2 class="text-2xl text-center text-gray-700 larg:w-full larg:text-3xl larg:absolute larg:-mt-12">Delivery unlimited</h2>
+        <div id="" class="flex flex-wrap align-middle justify-center gap-2 text-gray-700 larg:mt-14">
+            <img src="img/bitmap.webp" alt="" class="h-40 rounded-full"> 
+            <p class="w-screen text-center ">Sustainable logistics</p>
+            <p class="w-input text-center text-gray-500 font-light text-sm">As a premier logistics company in the UAE, we are committed to sustainable logistics, reducing environmental impact and maximizing efficiency. Our innovative solutions promote eco-friendly operations for a greener future.</p>
+        </div>
+            <div id="" class="flex flex-wrap align-middle justify-center gap-2 text-gray-700 larg:mt-14">
+            <img src="img/img-why@2x.webp" alt="" class="h-40 rounded-full"> 
+            <p class="w-screen text-center ">Flexible solutions</p>
+            <p class="w-[375px] text-center text-gray-500 font-light text-sm">We offer flexible logistics solutions tailored to diverse needs. From customized shipping to scalable services, we adapt to your business, ensuring seamless and efficient operations.</p>
+        </div>
+        <div id="" class="flex flex-wrap align-middle justify-center gap-2 text-gray-700 larg:mt-14">
+            <img src="img/img-header.webp" alt="" class="h-40 rounded-full"> 
+            <p class="w-screen text-center ">Supply chain resilience</p>
+            <p class="w-input text-center text-gray-500 font-light text-sm">Aramex enhances supply chain resilience with advanced technologies and robust strategies. Our proactive approach ensures uninterrupted operations, even amid unforeseen challenges.</p>
+        </div>
+       </section>
+       <section id="find-us" class="flex text-gray-700 mt-2 flex-wrap larg:flex-nowrap">
+        <div class="p-5">
+            <h1 class="text-2xl font-bold p-2">Find us around the world</h1>
+            <p class="font-light">With our vast global network, we are always within reach. We guarantee seamless and efficient express delivery, freight forwarding, and logistics solutions no matter where you are in the world.</p>
+        </div>
+        <div id="map">
+        <img src="img/map.webp" alt="" class="p-10 m-3">
+       </div>
+       </section>
+       
+        <footer class="bg-black p-4 rounded larg:flex justify-between larg:h-28">
+            <img src="img/group-11195.png" alt="" class="p-2 w-44  larg:h-20">
+           <div class="text-aramexRed larg:flex">
+            <a href="About.html"> <p class="p-2 border-b border-gray-600 larg:border-none cursor-pointer larg:hover:text-white "> About Aramex</p></a>
+            <p class="p-2 border-b border-gray-600 larg:border-none cursor-pointer larg:hover:text-white">Terms Of Use</p>
+            <p class="p-2 border-b border-gray-600 larg:border-none cursor-pointer larg:hover:text-white">Terms And Conditions</p>
+            <p class="p-2 border-b border-gray-600 larg:border-none cursor-pointer larg:hover:text-white">Cookie Policy</p>
+           </div>
+           <div id="logos" class="p-2 flex gap-2">
+            <img src="img/facebook.png" alt="" class="h-10 p-1 "> 
+            <img src="img/instagram.png" alt="" class="h-10 p-1 "> 
+            <img src="img/telegram.png" alt="" class=" h-10 p-1 "> 
+            <img src="img/linkedin.png" alt="" class="h-10 p-1 "> 
+            <img src="img/tik-tok.png" alt="" class="h-10 p-1 "> 
+            <div id="copyright" class="hidden larg:block absolute mt-10" >
+            <p class="text-white text-xs">© Arramex 2025. All rights reserved.</p>
+           </div>
+           </div>
+           <div id="copyright" class="larg:hidden" >
+            <p class="text-white text-xs">© Arramex 2025. All rights reserved.</p>
+           </div>
+        </footer>
+
+    </div>
+    <script src="sandbox.js"></script>
+    <!-- ====================================== -->
+<!-- ✅ ADDED: Auto + Manual Website Translation -->
+<!-- ✅ Detects browser language automatically -->
+<!-- ✅ Allows manual language switching -->
+<!-- ✅ Does NOT modify your original content -->
+<!-- ====================================== -->
+
+<!-- ✅ ADDED: Language Switch UI -->
+<div id="auto-translate-box" style="position:fixed;bottom:20px;right:20px;z-index:9999;background:white;padding:8px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.2);font-size:12px;">
+  <select id="languageSwitcher" onchange="changeLanguage(this.value)">
+    <option value="">🌍 Auto Detect</option>
+    <option value="en">English</option>
+    <option value="fr">French</option>
+    <option value="pt">Portuguese</option>
+    <option value="es">Spanish</option>
+    <option value="ar">Arabic</option>
+  </select>
+</div>
+
+<!-- ✅ ADDED: Function that manually switches language -->
+<script>
+  // ✅ This function manually changes the website language
+  function changeLanguage(lang) {
+    const selectField = document.querySelector("select.goog-te-combo");
+    if (!selectField) return;
+    selectField.value = lang;
+    selectField.dispatchEvent(new Event("change"));
+    localStorage.setItem("selectedLanguage", lang);
+  }
+</script>
+
+<!-- ✅ ADDED: Google Auto Translate Initialization -->
+<script>
+  // ✅ This function loads Google Translator
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+
+<!-- ✅ ADDED: Hidden Google Translate Container -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<!-- ✅ ADDED: Google Translate Core Script -->
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- ✅ ADDED: Auto-detect browser language on page load -->
+<script>
+  // ✅ Reads user's browser language and auto-translates
+  document.addEventListener("DOMContentLoaded", function () {
+    const savedLang = localStorage.getItem("selectedLanguage");
+    const browserLang = navigator.language.slice(0, 2);
+    const targetLang = savedLang || browserLang;
+
+    const interval = setInterval(() => {
+      const combo = document.querySelector("select.goog-te-combo");
+      if (combo) {
+        combo.value = targetLang;
+        combo.dispatchEvent(new Event("change"));
+        clearInterval(interval);
+      }
+    }, 500);
+  });
+</script>
+
+<!-- ====================================== -->
+<!-- ✅ END OF TRANSLATION SYSTEM -->
+<!-- ====================================== -->
+<!-- ====================================== -->
+<!-- ✅ ADDED: Modern Language Detection Popup -->
+<!-- ✅ Shows detected language -->
+<!-- ✅ Allows user to choose preferred language -->
+<!-- ✅ Red Close Button -->
+<!-- ✅ Central Modal Styling -->
+<!-- ====================================== -->
+
+<!-- ✅ ADDED: Popup Overlay -->
+<div id="lang-popup-overlay" style="position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:10000;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);">
+
+  <!-- ✅ ADDED: Popup Card -->
+  <div id="lang-popup" style="background:white;width:90%;max-width:420px;padding:28px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.35);text-align:center;font-family:system-ui;animation:popupFade 0.4s ease;">
+
+    <!-- ✅ ADDED: Popup Title -->
+    <h2 style="font-size:20px;font-weight:700;color:#DC291E;margin-bottom:10px;">
+      Language Detected
+    </h2>
+
+    <!-- ✅ ADDED: Detected Language Text -->
+    <p id="detected-language-text" style="font-size:14px;color:#444;margin-bottom:20px;">
+      Detecting your language...
+    </p>
+
+    <!-- ✅ ADDED: Language Selection Dropdown -->
+    <select id="popup-language-select" 
+      style="width:100%;padding:12px;border-radius:10px;border:1px solid #ddd;font-size:14px;margin-bottom:18px;">
+      <option value="">🌍 Auto Detect</option>
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="pt">Portuguese</option>
+      <option value="es">Spanish</option>
+      <option value="ar">Arabic</option>
+    </select>
+
+    <!-- ✅ ADDED: Apply Button -->
+    <button onclick="applyPopupLanguage()" 
+      style="width:100%;background:#111;color:white;padding:12px;border-radius:10px;font-size:14px;font-weight:600;margin-bottom:12px;">
+      Apply Language
+    </button>
+
+    <!-- ✅ ADDED: Red Close Button -->
+    <button onclick="closeLangPopup()" 
+      style="width:100%;background:#DC291E;color:white;padding:12px;border-radius:10px;font-size:14px;font-weight:600;">
+      Close
+    </button>
+
+  </div>
+</div>
+
+<!-- ✅ ADDED: Popup Animation -->
+<style>
+@keyframes popupFade {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+</style>
+
+<!-- ✅ ADDED: Popup Logic -->
+<script>
+  // ✅ Reads real browser language
+  const detectedLang = navigator.language || navigator.userLanguage;
+  const shortLang = detectedLang.slice(0, 2);
+
+  // ✅ Friendly language name mapping
+  const languageNames = {
+    en: "English",
+    fr: "French",
+    pt: "Portuguese",
+    es: "Spanish",
+    ar: "Arabic"
+  };
+
+  // ✅ Display detected language inside popup
+  const detectedText = document.getElementById("detected-language-text");
+  detectedText.innerText = "We detected your language as: " + (languageNames[shortLang] || shortLang.toUpperCase());
+
+  // ✅ Apply selected language from popup
+  function applyPopupLanguage() {
+    const selectedLang = document.getElementById("popup-language-select").value || shortLang;
+
+    // ✅ Save language for all pages
+    localStorage.setItem("selectedLanguage", selectedLang);
+
+    // ✅ Apply language using your already installed Google Translator
+    const combo = document.querySelector("select.goog-te-combo");
+    if (combo) {
+      combo.value = selectedLang;
+      combo.dispatchEvent(new Event("change"));
+    }
+
+    // ✅ Close popup after applying
+    closeLangPopup();
+  }
+
+  // ✅ Close popup function
+  function closeLangPopup() {
+    document.getElementById("lang-popup-overlay").style.display = "none";
+  }
+
+  // ✅ Show popup only on FIRST visit
+  if (localStorage.getItem("languagePopupShown")) {
+    document.getElementById("lang-popup-overlay").style.display = "none";
+  } else {
+    localStorage.setItem("languagePopupShown", "true");
+  }
+</script>
+
+<!-- ====================================== -->
+<!-- ✅ END OF LANGUAGE POPUP SYSTEM -->
+<!-- ====================================== -->
+
+</body>
+</html>
